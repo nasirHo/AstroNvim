@@ -6,4 +6,66 @@ return {
 
   -- { import = "astrocommunity.colorscheme.catppuccin" },
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.colorscheme.catppuccin" },
+  { -- further customize the options set by the community
+    "catppuccin",
+    opts = {
+      flavour = "frappe",
+      background = {
+        light = "latte",
+        dark = "frappe",
+      },
+      no_italic = true,
+      integrations = {
+        noice = true,
+        rainbow_delimiters = true,
+      },
+    },
+  },
+  { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
+  { import = "astrocommunity.completion.cmp-cmdline" },
+  { import = "astrocommunity.pack.bash" },
+  { import = "astrocommunity.pack.cmake" },
+  { import = "astrocommunity.pack.cpp" },
+  { import = "astrocommunity.pack.markdown" },
+  { import = "astrocommunity.pack.python" },
+  { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.yaml" },
+  { import = "astrocommunity.pack.lua" },
+  { import = "astrocommunity.utility.noice-nvim" },
+  {
+    "folke/noice.nvim",
+    opts = {
+      -- lsp = {
+      --   override = {
+      --     ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+      --     ["vim.lsp.util.stylize_markdown"] = true,
+      --     ["cmp.entry.get_documentation"] = true,
+      --   },
+      -- },
+      presets = {
+        bottom_search = false, -- use a classic bottom cmdline for search
+        command_palette = true, -- position the cmdline and popupmenu together
+        long_message_to_split = true, -- long messages will be sent to a split
+        inc_rename = false, -- enables an input dialog for inc-rename.nvim
+        lsp_doc_border = true, -- add a border to hover docs and signature help
+      },
+    },
+  },
+  { import = "astrocommunity.note-taking.obsidian-nvim" },
+  {
+    "epwalsh/obsidian.nvim",
+    event = { "BufReadPre " .. vim.fn.expand "~" .. "/Documents/obsidian-vault/**.md" },
+    opts = {
+      dir = "~/Documents/obsidian-vault",
+      daily_notes = {
+        -- Optional, if you keep daily notes in a separate directory.
+        folder = "my-notes/dailies",
+        -- Optional, if you want to change the date format for daily notes.
+        date_format = "%Y-%m-%d",
+      },
+      -- Optional, set to true if you don't want Obsidian to manage frontmatter.
+      disable_frontmatter = false,
+    },
+  },
 }

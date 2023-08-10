@@ -30,10 +30,16 @@ return {
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
+    ["<C-`>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle terminal" },
+    ["<C-'>"] = false,
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
   t = {
+    ["<C-`>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle terminal" },
+    ["jk"] = { "<C-\\><C-n>", desc = "Exit terminal to normal mode" },
+    ["<C-w>"] = { "<C-\\><C-n><C-w>", desc = "Exit terminal to normal mode" },
+    ["<C-'>"] = false,
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
   },

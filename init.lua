@@ -17,9 +17,6 @@ return {
     },
   },
 
-  -- Set colorscheme to use
-  colorscheme = "astrodark",
-
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
     virtual_text = true,
@@ -69,6 +66,26 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
+    vim.api.nvim_create_autocmd("VimLeave", {
+      command = 'set guicursor= | call chansend(v:stderr, "\x1b[ q")',
+    })
+
+    vim.api.nvim_create_autocmd({ "BufEnter", "FocusGained", "InsertLeave", "CmdlineLeave", "WinEnter" }, {
+      pattern = "*",
+      callback = function()
+        if vim.o.nu and vim.api.nvim_get_mode().mode ~= "i" then vim.opt.relativenumber = true end
+      end,
+    })
+
+    vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost", "InsertEnter", "CmdlineEnter", "WinLeave" }, {
+      pattern = "*",
+      callback = function()
+        if vim.o.nu then
+          vim.opt.relativenumber = false
+          vim.cmd "redraw"
+        end
+      end,
+    })
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {
