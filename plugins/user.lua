@@ -29,6 +29,13 @@ return {
       }
     end,
   },
+  {
+    "paopaol/cmp-doxygen",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-treesitter/nvim-treesitter-textobjects"
+    },
+  }
   -- You can also add new plugins here as well:
   -- Add plugins, the lazy syntax
   -- "andweeb/presence.nvim",

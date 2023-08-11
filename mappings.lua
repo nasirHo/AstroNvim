@@ -32,6 +32,7 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     ["<C-`>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle terminal" },
     ["<C-'>"] = false,
+    ["<leader>fN"] = { function() require("noice").cmd("telescope") end, desc = "find noice" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
