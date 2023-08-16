@@ -75,6 +75,7 @@ return {
   -- { import = "astrocommunity.motion.vim-matchup"},
   { import = "astrocommunity.project.nvim-spectre" },
   { import = "astrocommunity.lsp.inc-rename-nvim" },
+  { import = "astrocommunity.diagnostics.trouble-nvim" },
   { import = "astrocommunity.note-taking.obsidian-nvim" },
   {
     "epwalsh/obsidian.nvim",
@@ -95,8 +96,8 @@ return {
   {
     "m4xshen/hardtime.nvim",
     opts = {
-      disable_keys = {
-      },
+      enabled = false,
+      disable_keys = {},
     },
   },
 }
