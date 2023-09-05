@@ -11,18 +11,18 @@ return {
     require("clangd_extensions.inlay_hints").setup_autocmd()
     require("clangd_extensions.inlay_hints").setup_inlay_hints()
   end,
-  cmd = {
-    "clangd",
-    "--function-arg-placeholders=0",
-    "--background-index",
-    "-j=8",
-    "--query-driver=/usr/bin/**/clang-*,/bin/clang,/bin/clang++,/usr/bin/gcc,/usr/bin/g++",
-    "--clang-tidy",
-    "--clang-tidy-checks=performance-*,bugprone-*",
-    "--all-scopes-completion",
-    "--cross-file-rename",
-    "--completion-style=detailed",
-    "--header-insertion-decorators",
-    "--header-insertion=iwyu",
-  },
+  -- cmd = {
+  --   "clangd",
+  --   "--function-arg-placeholders=0",
+  --   "--background-index",
+  --   "-j=8",
+  --   "--query-driver=/usr/bin/**/clang-*,/bin/clang,/bin/clang++,/usr/bin/gcc,/usr/bin/g++",
+  --   "--clang-tidy",
+  --   "--clang-tidy-checks=performance-*,bugprone-*",
+  --   "--all-scopes-completion",
+  --   "--cross-file-rename",
+  --   "--completion-style=detailed",
+  --   "--header-insertion-decorators",
+  --   "--header-insertion=iwyu",
+  -- },
 }
