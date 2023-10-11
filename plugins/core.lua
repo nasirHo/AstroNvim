@@ -28,6 +28,7 @@ return {
   },
   {
     "nvim-neo-tree/neo-tree.nvim",
+    enabled = true,
     opts = {
       filesystem = {
         bind_to_cwd = true, -- true creates a 2-way binding between vim's cwd and neo-tree's root
@@ -84,17 +85,17 @@ return {
       return opts
     end,
   },
-  {
-    "window-picker",
-    opts = {
-      hint = "floating-big-letter",
-      picker_config = {
-        statusline_winbar_picker = {
-          use_winbar = "never",
-        },
-      },
-    },
-  },
+  -- {
+  --   "window-picker",
+  --   opts = {
+  --     hint = "floating-big-letter",
+  --     picker_config = {
+  --       statusline_winbar_picker = {
+  --         use_winbar = "never",
+  --       },
+  --     },
+  --   },
+  -- },
   {
     "rcarriga/nvim-notify",
     opts = {

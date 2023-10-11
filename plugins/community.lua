@@ -83,9 +83,9 @@ return {
   { import = "astrocommunity.note-taking.obsidian-nvim" },
   {
     "epwalsh/obsidian.nvim",
-    event = { "BufReadPre " .. vim.fn.expand "~" .. "/Documents/obsidian-vault/**.md" },
+    event = { "BufReadPre " .. vim.env.HOME .. "/Documents/obsidian-vault/**.md" },
     opts = {
-      dir = "~/Documents/obsidian-vault",
+      dir = vim.env.HOME .. "/Documents/obsidian-vault",
       daily_notes = {
         -- Optional, if you keep daily notes in a separate directory.
         folder = "my-notes/dailies",
