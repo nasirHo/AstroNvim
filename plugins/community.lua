@@ -96,12 +96,12 @@ return {
       disable_frontmatter = false,
     },
   },
-  { import = "astrocommunity.workflow.hardtime-nvim" },
-  {
-    "m4xshen/hardtime.nvim",
-    opts = {
-      enabled = false,
-      disable_keys = {},
-    },
-  },
+  -- { import = "astrocommunity.workflow.hardtime-nvim" },
+  -- {
+  --   "m4xshen/hardtime.nvim",
+  --   opts = {
+  --     enabled = false,
+  --     disable_keys = {},
+  --   },
+  -- },
 }

@@ -85,17 +85,17 @@ return {
       return opts
     end,
   },
-  -- {
-  --   "window-picker",
-  --   opts = {
-  --     hint = "floating-big-letter",
-  --     picker_config = {
-  --       statusline_winbar_picker = {
-  --         use_winbar = "never",
-  --       },
-  --     },
-  --   },
-  -- },
+  {
+    's1n7ax/nvim-window-picker',
+    opts = {
+      hint = "floating-big-letter",
+      picker_config = {
+        statusline_winbar_picker = {
+          use_winbar = "never",
+        },
+      },
+    },
+  },
   {
     "rcarriga/nvim-notify",
     opts = {
