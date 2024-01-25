@@ -19,7 +19,7 @@ return {
       integrations = {
         noice = true,
         rainbow_delimiters = true,
-        flash = true
+        flash = true,
       },
     },
   },
@@ -80,22 +80,6 @@ return {
   { import = "astrocommunity.project.nvim-spectre" },
   { import = "astrocommunity.lsp.inc-rename-nvim" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
-  { import = "astrocommunity.note-taking.obsidian-nvim" },
-  {
-    "epwalsh/obsidian.nvim",
-    event = { "BufReadPre " .. vim.env.HOME .. "/Documents/obsidian-vault/**.md" },
-    opts = {
-      dir = vim.env.HOME .. "/Documents/obsidian-vault",
-      daily_notes = {
-        -- Optional, if you keep daily notes in a separate directory.
-        folder = "my-notes/dailies",
-        -- Optional, if you want to change the date format for daily notes.
-        date_format = "%Y-%m-%d",
-      },
-      -- Optional, set to true if you don't want Obsidian to manage frontmatter.
-      disable_frontmatter = false,
-    },
-  },
   -- { import = "astrocommunity.workflow.hardtime-nvim" },
   -- {
   --   "m4xshen/hardtime.nvim",
