@@ -89,6 +89,10 @@ return {
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
       },
+
+      t = {
+        ["jk"] = { "<C-\\><C-n>", desc = "Enter insert mode in terminal" },
+      }
     },
     rooter = {
       autochdir = true
