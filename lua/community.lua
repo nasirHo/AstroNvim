@@ -22,6 +22,8 @@ return {
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.hyprlang" },
   { import = "astrocommunity.markdown-and-latex.vimtex" },
+  -- comment
+  { import = "astrocommunity.comment.ts-comments-nvim" },
   -- motion
   { import = "astrocommunity.motion.tabout-nvim" },
   { import = "astrocommunity.motion.leap-nvim" },
@@ -32,4 +34,5 @@ return {
   { import = "astrocommunity.recipes.cache-colorscheme" },
   { import = "astrocommunity.recipes.diagnostic-virtual-lines-current-line" },
   { import = "astrocommunity.recipes.picker-lsp-mappings" },
+  -- { import = "astrocommunity.recipes.vscode" },
 }
